@@ -15,23 +15,25 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 //    let flashView = UIView()
     
     @IBOutlet var sceneView: ARSCNView!
+    let drawingService = DrawingService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+<<<<<<< HEAD:WandARaw/ViewController.swift
 //        setupViews()
 //        flashIndicator()
         
         sceneView = ARSCNView(frame: self.view.frame)
+=======
+        sceneView = ARManager.shared.sceneView
+        sceneView.frame = self.view.frame
+>>>>>>> main:WandARaw/AR/ViewController.swift
         self.view.addSubview(sceneView)
         
         // Set the view's delegate
         sceneView.delegate = self
         
-        // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
-        
-        // function add component
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -87,7 +89,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sphere.geometry = SCNSphere(radius:0.0025)
         sphere.geometry?.firstMaterial?.diffuse.contents = UIColor.red
         
-        DrawingService.addChildNode(node: sphere, sceneView: sceneView)
+        drawingService.addChildNode(node: sphere)
         
     }
     
