@@ -57,7 +57,6 @@
 		A8CEF8182BDF34B200E96B74 /* WandARaw */ = {
 			isa = PBXGroup;
 			children = (
-				A8CEF82F2BDF430000E96B74 /* New Group */,
 				A8CEF82C2BDF388000E96B74 /* Constants */,
 				A8CEF8292BDF35D100E96B74 /* Services */,
 				A8CEF8192BDF34B200E96B74 /* AppDelegate.swift */,
@@ -83,13 +82,6 @@
 				A8CEF82D2BDF388B00E96B74 /* Constants.swift */,
 			);
 			path = Constants;
-			sourceTree = "<group>";
-		};
-		A8CEF82F2BDF430000E96B74 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
