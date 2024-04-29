@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		634AA2B22BDF9DCA00FF432D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634AA2B12BDF9DCA00FF432D /* ContentView.swift */; };
+		634AA2B62BDFA13200FF432D /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634AA2B52BDFA13200FF432D /* ARViewContainer.swift */; };
+		634AA2B82BDFA7E600FF432D /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634AA2B72BDFA7E600FF432D /* ImageSaver.swift */; };
 		A8CEF81A2BDF34B200E96B74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF8192BDF34B200E96B74 /* AppDelegate.swift */; };
 		A8CEF81C2BDF34B200E96B74 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = A8CEF81B2BDF34B200E96B74 /* art.scnassets */; };
 		A8CEF81E2BDF34B200E96B74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF81D2BDF34B200E96B74 /* ViewController.swift */; };
@@ -17,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63466E072BDF651A006A4993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		634AA2B12BDF9DCA00FF432D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		634AA2B52BDFA13200FF432D /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
+		634AA2B72BDFA7E600FF432D /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 		A8CEF8162BDF34B200E96B74 /* WandARaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WandARaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8CEF8192BDF34B200E96B74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8CEF81B2BDF34B200E96B74 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -57,13 +64,17 @@
 		A8CEF8182BDF34B200E96B74 /* WandARaw */ = {
 			isa = PBXGroup;
 			children = (
-				A8CEF82C2BDF388000E96B74 /* Constants */,
+				63466E072BDF651A006A4993 /* Info.plist */,
 				A8CEF8292BDF35D100E96B74 /* Services */,
 				A8CEF8192BDF34B200E96B74 /* AppDelegate.swift */,
 				A8CEF81B2BDF34B200E96B74 /* art.scnassets */,
 				A8CEF81D2BDF34B200E96B74 /* ViewController.swift */,
 				A8CEF81F2BDF34B200E96B74 /* Main.storyboard */,
 				A8CEF8222BDF34B300E96B74 /* Assets.xcassets */,
+				A8CEF82C2BDF388000E96B74 /* Constants */,
+				634AA2B12BDF9DCA00FF432D /* ContentView.swift */,
+				634AA2B52BDFA13200FF432D /* ARViewContainer.swift */,
+				634AA2B72BDFA7E600FF432D /* ImageSaver.swift */,
 			);
 			path = WandARaw;
 			sourceTree = "<group>";
@@ -156,9 +167,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8CEF81E2BDF34B200E96B74 /* ViewController.swift in Sources */,
+				634AA2B22BDF9DCA00FF432D /* ContentView.swift in Sources */,
+				634AA2B62BDFA13200FF432D /* ARViewContainer.swift in Sources */,
 				A8CEF81A2BDF34B200E96B74 /* AppDelegate.swift in Sources */,
 				A8CEF82B2BDF35F200E96B74 /* DrawingService.swift in Sources */,
 				A8CEF82E2BDF388B00E96B74 /* Constants.swift in Sources */,
+				634AA2B82BDFA7E600FF432D /* ImageSaver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,10 +316,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G43U5DAGS3;
+				DEVELOPMENT_TEAM = 4V452CD2YS;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WandARaw/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We want to save the filtered photo";
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
@@ -331,10 +347,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G43U5DAGS3;
+				DEVELOPMENT_TEAM = 4V452CD2YS;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WandARaw/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We want to save the filtered photo";
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
