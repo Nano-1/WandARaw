@@ -23,5 +23,11 @@ class DrawingService: NSObject{
         node.simdTransform = modifiedMatrix
         sceneView.scene.rootNode.addChildNode(node)
     }
+    
+    static func deleteAllNode(sceneView: ARSCNView){
+        sceneView.scene.rootNode.enumerateChildNodes { (node, _) in
+            node.removeFromParentNode()
+        }
+    }
 }
 
