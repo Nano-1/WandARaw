@@ -14,6 +14,9 @@
 		A8CEF8232BDF34B300E96B74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8CEF8222BDF34B300E96B74 /* Assets.xcassets */; };
 		A8CEF82B2BDF35F200E96B74 /* DrawingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF82A2BDF35F200E96B74 /* DrawingService.swift */; };
 		A8CEF82E2BDF388B00E96B74 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF82D2BDF388B00E96B74 /* Constants.swift */; };
+		A8CEF83B2BDF8A0D00E96B74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF83A2BDF8A0D00E96B74 /* ContentView.swift */; };
+		A8CEF83D2BDF927200E96B74 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF83C2BDF927200E96B74 /* ARViewContainer.swift */; };
+		A8CEF8482BDFA4AA00E96B74 /* ARManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF8472BDFA4AA00E96B74 /* ARManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		A8CEF8222BDF34B300E96B74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8CEF82A2BDF35F200E96B74 /* DrawingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingService.swift; sourceTree = "<group>"; };
 		A8CEF82D2BDF388B00E96B74 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A8CEF83A2BDF8A0D00E96B74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A8CEF83C2BDF927200E96B74 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
+		A8CEF8472BDFA4AA00E96B74 /* ARManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +63,13 @@
 		A8CEF8182BDF34B200E96B74 /* WandARaw */ = {
 			isa = PBXGroup;
 			children = (
+				A8CEF8462BDFA49700E96B74 /* Manager */,
+				A8CEF83E2BDF990500E96B74 /* AR */,
+				A8CEF8392BDF89F400E96B74 /* View */,
 				A8CEF82C2BDF388000E96B74 /* Constants */,
 				A8CEF8292BDF35D100E96B74 /* Services */,
 				A8CEF8192BDF34B200E96B74 /* AppDelegate.swift */,
 				A8CEF81B2BDF34B200E96B74 /* art.scnassets */,
-				A8CEF81D2BDF34B200E96B74 /* ViewController.swift */,
 				A8CEF81F2BDF34B200E96B74 /* Main.storyboard */,
 				A8CEF8222BDF34B300E96B74 /* Assets.xcassets */,
 			);
@@ -82,6 +90,31 @@
 				A8CEF82D2BDF388B00E96B74 /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		A8CEF8392BDF89F400E96B74 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A8CEF83A2BDF8A0D00E96B74 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A8CEF83E2BDF990500E96B74 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				A8CEF83C2BDF927200E96B74 /* ARViewContainer.swift */,
+				A8CEF81D2BDF34B200E96B74 /* ViewController.swift */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		A8CEF8462BDFA49700E96B74 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A8CEF8472BDFA4AA00E96B74 /* ARManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,9 +189,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8CEF81E2BDF34B200E96B74 /* ViewController.swift in Sources */,
+				A8CEF8482BDFA4AA00E96B74 /* ARManager.swift in Sources */,
+				A8CEF83B2BDF8A0D00E96B74 /* ContentView.swift in Sources */,
 				A8CEF81A2BDF34B200E96B74 /* AppDelegate.swift in Sources */,
 				A8CEF82B2BDF35F200E96B74 /* DrawingService.swift in Sources */,
 				A8CEF82E2BDF388B00E96B74 /* Constants.swift in Sources */,
+				A8CEF83D2BDF927200E96B74 /* ARViewContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +342,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
@@ -335,6 +372,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;

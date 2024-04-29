@@ -9,7 +9,8 @@ import SceneKit
 import ARKit
 
 class DrawingService: NSObject{
-    static func addChildNode(node: SCNNode, sceneView: ARSCNView){
+    let sceneView = ARManager.shared.sceneView
+    func addChildNode(node: SCNNode){
         guard let currentFrame = sceneView.session.currentFrame else {return}
         let camera = currentFrame.camera
         let transform = camera.transform
