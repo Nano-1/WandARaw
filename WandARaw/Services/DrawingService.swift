@@ -25,7 +25,7 @@ class DrawingService: NSObject{
         sceneView.scene.rootNode.addChildNode(node)
     }
     
-    static func deleteAllNode(sceneView: ARSCNView){
+    func deleteAllNode(){
         sceneView.scene.rootNode.enumerateChildNodes { (node, _) in
             node.removeFromParentNode()
         }
