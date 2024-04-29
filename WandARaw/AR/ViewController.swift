@@ -12,17 +12,18 @@ import ARKit
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
+    let drawingService = DrawingService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        sceneView = ARManager.shared.sceneView
+        sceneView.frame = self.view.frame
+        self.view.addSubview(sceneView)
+        
         // Set the view's delegate
         sceneView.delegate = self
         
-        // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
-        
-        // function add component
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,7 +79,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sphere.geometry = SCNSphere(radius:0.0025)
         sphere.geometry?.firstMaterial?.diffuse.contents = UIColor.red
         
-        DrawingService.addChildNode(node: sphere, sceneView: sceneView)
+        drawingService.addChildNode(node: sphere)
         
     }
 }
