@@ -12,6 +12,8 @@
 		A8CEF81E2BDF34B200E96B74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF81D2BDF34B200E96B74 /* ViewController.swift */; };
 		A8CEF8212BDF34B200E96B74 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A8CEF8202BDF34B200E96B74 /* Base */; };
 		A8CEF8232BDF34B300E96B74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8CEF8222BDF34B300E96B74 /* Assets.xcassets */; };
+		A8CEF82B2BDF35F200E96B74 /* DrawingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF82A2BDF35F200E96B74 /* DrawingService.swift */; };
+		A8CEF82E2BDF388B00E96B74 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF82D2BDF388B00E96B74 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		A8CEF81D2BDF34B200E96B74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A8CEF8202BDF34B200E96B74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8CEF8222BDF34B300E96B74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A8CEF82A2BDF35F200E96B74 /* DrawingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingService.swift; sourceTree = "<group>"; };
+		A8CEF82D2BDF388B00E96B74 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,9 @@
 		A8CEF8182BDF34B200E96B74 /* WandARaw */ = {
 			isa = PBXGroup;
 			children = (
+				A8CEF82F2BDF430000E96B74 /* New Group */,
+				A8CEF82C2BDF388000E96B74 /* Constants */,
+				A8CEF8292BDF35D100E96B74 /* Services */,
 				A8CEF8192BDF34B200E96B74 /* AppDelegate.swift */,
 				A8CEF81B2BDF34B200E96B74 /* art.scnassets */,
 				A8CEF81D2BDF34B200E96B74 /* ViewController.swift */,
@@ -60,6 +67,29 @@
 				A8CEF8222BDF34B300E96B74 /* Assets.xcassets */,
 			);
 			path = WandARaw;
+			sourceTree = "<group>";
+		};
+		A8CEF8292BDF35D100E96B74 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A8CEF82A2BDF35F200E96B74 /* DrawingService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A8CEF82C2BDF388000E96B74 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A8CEF82D2BDF388B00E96B74 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		A8CEF82F2BDF430000E96B74 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +165,8 @@
 			files = (
 				A8CEF81E2BDF34B200E96B74 /* ViewController.swift in Sources */,
 				A8CEF81A2BDF34B200E96B74 /* AppDelegate.swift in Sources */,
+				A8CEF82B2BDF35F200E96B74 /* DrawingService.swift in Sources */,
+				A8CEF82E2BDF388B00E96B74 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +310,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G43U5DAGS3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -306,6 +339,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G43U5DAGS3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

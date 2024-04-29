@@ -22,11 +22,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
         
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
-        // Set the scene to the view
-        sceneView.scene = scene
+        // function add component
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,6 +65,20 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     func sessionInterruptionEnded(_ session: ARSession) {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
+        
+    }
+    
+    
+    func renderer(_ renderer: any SCNSceneRenderer, willRenderScene scene: SCNScene, atTime time: TimeInterval) {
+        
+        let constants = Constants()
+        
+        let sphere = SCNNode()
+        sphere.name = constants.sphereName
+        sphere.geometry = SCNSphere(radius:0.0025)
+        sphere.geometry?.firstMaterial?.diffuse.contents = UIColor.red
+        
+        DrawingService.addChildNode(node: sphere, sceneView: sceneView)
         
     }
 }
