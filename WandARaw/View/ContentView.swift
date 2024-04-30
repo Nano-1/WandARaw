@@ -7,10 +7,6 @@
 
 import SwiftUI
 
-//protocol BrushPressingDelegate: AnyObject {
-//    func setIsBrushPressing(_ isPressing: Bool)
-//}
-
 struct ContentView: View {
     
     let viewController = ARManager.shared
