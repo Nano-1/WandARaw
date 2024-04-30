@@ -16,36 +16,52 @@ struct ContentView: View {
         ZStack(content: {
             ARViewContainer()
                 .edgesIgnoringSafeArea(.all)
-            
-            // Crosshair
+                // Add button here
+             // Crosshair
             Text("+")
                 .fontWeight(.heavy)
                 .foregroundStyle(Color.green)
-            
-            // Button
-            VStack(alignment: .trailing) {
+
+            VStack {
+                HStack {
+//                  Trash Icon
+                    IconButton(imageName: "trash", iconSize: 25, buttonFill: false, label: "trash") {
+                        print("Trash tapped") // Handle button tap action
+                    }
+                    Spacer()
+//                  Info Icon
+                    IconButton(imageName: "trash", iconSize: 25, buttonFill: false, label: "trash2") {
+                        print("Info tapped") // Handle button tap action
+                    }
+                }
                 Spacer()
-                Button(action: {
-                    takePhoto()
-                }, label: {
-                    Image(systemName: "camera.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 50)
-                        .padding()
-                        .foregroundStyle(Color.black)
-                })
+                HStack(alignment: .center, spacing: 40) {
+//                  Color Icon
+                    IconButton(imageName: "camera", iconSize: 35, buttonFill: false, label: "color") {
+                        print("Color tapped") // Handle button tap action
+                    }
+//                  Brush Icon
+                    IconButton(imageName: "brush", iconSize: 35, buttonFill: true, label: "brush") {
+                        print("Brush tapped") // Handle button tap action
+                    }
+                    
+//                  Camera Icon
+                    IconButton(imageName: "camera", iconSize: 35, buttonFill: false, label: "camera") {
+                        print("Camera tapped") // Handle button tap action
+                        takePhoto()
+                    }
+                }
+                .padding(16)
             }
-            
             // Photo Taken Indicator
-            Rectangle()
-                .fill(.white)
-                .ignoresSafeArea()
-                .opacity(isPhotoTapped ? 1.0 : 0.0)
-                .animation(.easeInOut(duration: 0.3), value: isPhotoTapped)
+                Rectangle()
+                    .fill(.white)
+                    .ignoresSafeArea()
+                    .opacity(isPhotoTapped ? 1.0 : 0.0)
+                    .animation(.easeInOut(duration: 0.3), value: isPhotoTapped)
         })
     }
-    
+
     func takePhoto() {
         isPhotoTapped = true
         UIImageWriteToSavedPhotosAlbum(viewController.sceneView.snapshot(), viewController, nil, nil)
