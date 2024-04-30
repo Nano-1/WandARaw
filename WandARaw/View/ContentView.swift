@@ -12,6 +12,7 @@ import SwiftUI
 //}
 
 struct ContentView: View {
+    @State private var isShowingSplash = true
     @State private var isBrushPressing = false
     
     var body: some View {
@@ -58,6 +59,19 @@ struct ContentView: View {
                 }
                 .padding(16)
             }
+            // Splash screen
+            if isShowingSplash {
+                SplashScreenView()
+                    .onAppear {
+                        // Simulate a delay to show the splash screen for a few seconds
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                            withAnimation {
+                                isShowingSplash = false
+                            }
+                        }
+                    }
+            }
+
         })
     }
 }

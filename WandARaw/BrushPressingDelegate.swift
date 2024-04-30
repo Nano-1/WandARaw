@@ -4,9 +4,9 @@
 //
 //  Created by Risa on 29/04/24.
 //
-
-import Foundation
-
-protocol BrushPressingDelegate: AnyObject {
-    func setIsBrushPressing(_ isPressing: Bool)
-}
+//
+//import Foundation
+//
+//protocol BrushPressingDelegate: AnyObject {
+//    func setIsBrushPressing(_ isPressing: Bool)
+//}
