@@ -24,6 +24,7 @@ struct IconButton: View {
             .fill(buttonFill == true ? .white : .clear)
             .overlay(Image(imageName)
                 .resizable()
+                .scaledToFit()
                 .frame(width: iconSize, height: iconSize)
             )
         .frame(width: 72, height: 72)
