@@ -20,6 +20,7 @@ struct ContentView: View {
             ARViewContainer(isBrushPressing: $isBrushPressing)
                 .edgesIgnoringSafeArea(.all)
             // Add button here
+            Rectangle().fill()
             
              // Crosshair
             Text("+")
@@ -34,17 +35,16 @@ struct ContentView: View {
                         drawingService.deleteAllNode()
                     }
                     Spacer()
-//                  Camera Icon
-                    IconButton(imageName: "camera2", iconSize: 27, buttonFill: false, label: "camera") {
-                        print("Camera tapped") // Handle button tap action
-                        takePhoto()
+//                  Undo Icon
+                    IconButton(imageName: "arrow.uturn.backward", iconSize: 25, buttonFill: false, label: "color") {
+                        print("Color tapped") // Handle button tap action
                     }
                 }
                 Spacer()
                 HStack(alignment: .center, spacing: 40) {
-//                  Color Icon
-                    IconButton(imageName: "circle.fill", iconSize: 35, buttonFill: false, label: "color") {
-                        print("Color tapped") // Handle button tap action
+//                  Tools Icon
+                    IconButton(imageName: "paintpalette", iconSize: 35, buttonFill: false, label: "brush") {
+                        print("Brush tapped") // Handle button tap action
                     }
 //                  Draw Icon
                     IconButton(imageName: "brush", iconSize: 35, buttonFill: true, label: "brush") {
@@ -58,11 +58,10 @@ struct ContentView: View {
                         print(self.isBrushPressing)
                                 }, perform: {})
                                 .padding()
-                    
-//                  Brush Size Icon
-                    IconButton(imageName: "pencil.tip", iconSize: 35, buttonFill: false, label: "brush size") {
-                        print("Brush size tapped") // Handle button tap action
-                        
+//                  Camera Icon
+                    IconButton(imageName: "camera2", iconSize: 35, buttonFill: false, label: "camera") {
+                        print("Camera tapped") // Handle button tap action
+                        takePhoto()
                     }
                 }
                 .padding(16)
