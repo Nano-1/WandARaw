@@ -8,6 +8,7 @@
 import UIKit
 import SceneKit
 import ARKit
+import SwiftUI
 
 
 class ViewController: UIViewController, ARSCNViewDelegate {
@@ -20,6 +21,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     @IBOutlet var sceneView: ARSCNView!
     let drawingService = DrawingService()
+    var selectedColor : Color = .blue
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,7 +85,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let sphere = SCNNode()
         sphere.name = constants.sphereName
         sphere.geometry = SCNSphere(radius:0.0025)
-        sphere.geometry?.firstMaterial?.diffuse.contents = UIColor.red
+        print("selected color is \(selectedColor)")
+        sphere.geometry?.firstMaterial?.diffuse.contents = UIColor(selectedColor)
         
         if isBrushPressing {
             drawingService.addChildNode(node: sphere)
