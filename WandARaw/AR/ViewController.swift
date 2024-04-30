@@ -9,8 +9,15 @@ import UIKit
 import SceneKit
 import ARKit
 
+
 class ViewController: UIViewController, ARSCNViewDelegate {
 
+    var isBrushPressing: Bool = false {
+        didSet {
+            // Use isBrushPressing in your AR scene
+            print("isBrushPressing: \(isBrushPressing)")
+        }
+    }
     @IBOutlet var sceneView: ARSCNView!
     let drawingService = DrawingService()
     
@@ -69,7 +76,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
     }
     
-    
     func renderer(_ renderer: any SCNSceneRenderer, willRenderScene scene: SCNScene, atTime time: TimeInterval) {
         
         let constants = Constants()
@@ -79,7 +85,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sphere.geometry = SCNSphere(radius:0.0025)
         sphere.geometry?.firstMaterial?.diffuse.contents = UIColor.red
         
-        drawingService.addChildNode(node: sphere)
-        
+        if isBrushPressing {
+            drawingService.addChildNode(node: sphere)
+        }
     }
 }

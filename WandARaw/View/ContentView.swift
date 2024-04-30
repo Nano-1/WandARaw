@@ -7,15 +7,21 @@
 
 import SwiftUI
 
+//protocol BrushPressingDelegate: AnyObject {
+//    func setIsBrushPressing(_ isPressing: Bool)
+//}
+
 struct ContentView: View {
     
     let viewController = ARManager.shared
     let drawingService = DrawingService()
     @State private var isPhotoTapped = false
     
+    @State private var isBrushPressing = false
+    
     var body: some View {
         ZStack(content: {
-            ARViewContainer()
+            ARViewContainer(isBrushPressing: $isBrushPressing)
                 .edgesIgnoringSafeArea(.all)
                 // Add button here
              // Crosshair

@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct ARViewContainer: UIViewControllerRepresentable {
+    @Binding var isBrushPressing: Bool
+    
     func makeUIViewController(context: Context) -> ViewController {
-        return ViewController()
+        let viewController = ViewController()
+        viewController.isBrushPressing = isBrushPressing
+        return viewController
     }
     
     func updateUIViewController(_ uiViewController: ViewController, context: Context) {
         // Update the view controller configuration if needed
+        uiViewController.isBrushPressing = isBrushPressing
     }
 }
