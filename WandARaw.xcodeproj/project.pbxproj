@@ -18,6 +18,8 @@
 		A8CEF83B2BDF8A0D00E96B74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF83A2BDF8A0D00E96B74 /* ContentView.swift */; };
 		A8CEF83D2BDF927200E96B74 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF83C2BDF927200E96B74 /* ARViewContainer.swift */; };
 		A8CEF8482BDFA4AA00E96B74 /* ARManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF8472BDFA4AA00E96B74 /* ARManager.swift */; };
+		B5634E1B2BE0A18F00720181 /* AnimateBrushColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5634E1A2BE0A18F00720181 /* AnimateBrushColor.swift */; };
+		B5634E1D2BE0A1A300720181 /* BrushColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5634E1C2BE0A1A300720181 /* BrushColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		A8CEF83A2BDF8A0D00E96B74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A8CEF83C2BDF927200E96B74 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
 		A8CEF8472BDFA4AA00E96B74 /* ARManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARManager.swift; sourceTree = "<group>"; };
+		B5634E1A2BE0A18F00720181 /* AnimateBrushColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateBrushColor.swift; sourceTree = "<group>"; };
+		B5634E1C2BE0A1A300720181 /* BrushColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 		A8CEF8182BDF34B200E96B74 /* WandARaw */ = {
 			isa = PBXGroup;
 			children = (
+				B5634E192BE0A17100720181 /* Components */,
 				A8CEF8462BDFA49700E96B74 /* Manager */,
 				A8CEF83E2BDF990500E96B74 /* AR */,
 				A8CEF8392BDF89F400E96B74 /* View */,
@@ -118,6 +123,15 @@
 				A8CEF8472BDFA4AA00E96B74 /* ARManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		B5634E192BE0A17100720181 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B5634E1A2BE0A18F00720181 /* AnimateBrushColor.swift */,
+				B5634E1C2BE0A1A300720181 /* BrushColor.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +207,9 @@
 			files = (
 				580924CA2BDFC92A0013E6ED /* IconButton.swift in Sources */,
 				A8CEF81E2BDF34B200E96B74 /* ViewController.swift in Sources */,
+				B5634E1D2BE0A1A300720181 /* BrushColor.swift in Sources */,
 				A8CEF8482BDFA4AA00E96B74 /* ARManager.swift in Sources */,
+				B5634E1B2BE0A18F00720181 /* AnimateBrushColor.swift in Sources */,
 				A8CEF83B2BDF8A0D00E96B74 /* ContentView.swift in Sources */,
 				A8CEF81A2BDF34B200E96B74 /* AppDelegate.swift in Sources */,
 				A8CEF82B2BDF35F200E96B74 /* DrawingService.swift in Sources */,
@@ -342,7 +358,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G43U5DAGS3;
+				DEVELOPMENT_TEAM = VNG2A57GP5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -373,7 +389,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VR8745VKZG;
+				DEVELOPMENT_TEAM = VNG2A57GP5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

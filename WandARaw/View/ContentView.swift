@@ -11,13 +11,14 @@ struct ContentView: View {
     
     let viewController = ARManager.shared
     let drawingService = DrawingService()
+    let arViewController = ViewController()
     @State private var isPhotoTapped = false
-    
+    @State var selectedColor = Color.blue
     @State private var isBrushPressing = false
     
     var body: some View {
         ZStack(content: {
-            ARViewContainer(isBrushPressing: $isBrushPressing)
+            ARViewContainer(isBrushPressing: $isBrushPressing, viewController: arViewController)
                 .edgesIgnoringSafeArea(.all)
                 // Add button here
              // Crosshair
@@ -41,9 +42,10 @@ struct ContentView: View {
                 Spacer()
                 HStack(alignment: .center, spacing: 40) {
 //                  Color Icon
-                    IconButton(imageName: "camera", iconSize: 35, buttonFill: false, label: "color") {
-                        print("Color tapped") // Handle button tap action
-                    }
+                    AnimateBrushColor(selectedColor: $selectedColor, contentViewInstance: self, viewController: arViewController)
+//                    {
+//                        print("Color tapped") // Handle button tap action
+//                    }
 //                  Brush Icon
                     IconButton(imageName: "brush", iconSize: 35, buttonFill: true, label: "brush") {
                         print("Brush tapped") // Handle button tap action
