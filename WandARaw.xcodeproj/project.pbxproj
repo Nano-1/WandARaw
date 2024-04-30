@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		580924CA2BDFC92A0013E6ED /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580924C92BDFC92A0013E6ED /* IconButton.swift */; };
+		580924CC2BDFD77E0013E6ED /* BrushPressingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580924CB2BDFD77E0013E6ED /* BrushPressingDelegate.swift */; };
 		A8CEF81A2BDF34B200E96B74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF8192BDF34B200E96B74 /* AppDelegate.swift */; };
 		A8CEF81C2BDF34B200E96B74 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = A8CEF81B2BDF34B200E96B74 /* art.scnassets */; };
 		A8CEF81E2BDF34B200E96B74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF81D2BDF34B200E96B74 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		580924C92BDFC92A0013E6ED /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
+		580924CB2BDFD77E0013E6ED /* BrushPressingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushPressingDelegate.swift; sourceTree = "<group>"; };
 		A8CEF8162BDF34B200E96B74 /* WandARaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WandARaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8CEF8192BDF34B200E96B74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8CEF81B2BDF34B200E96B74 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				A8CEF81B2BDF34B200E96B74 /* art.scnassets */,
 				A8CEF81F2BDF34B200E96B74 /* Main.storyboard */,
 				A8CEF8222BDF34B300E96B74 /* Assets.xcassets */,
+				580924CB2BDFD77E0013E6ED /* BrushPressingDelegate.swift */,
 			);
 			path = WandARaw;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				A8CEF81E2BDF34B200E96B74 /* ViewController.swift in Sources */,
 				A8CEF8482BDFA4AA00E96B74 /* ARManager.swift in Sources */,
 				A8CEF83B2BDF8A0D00E96B74 /* ContentView.swift in Sources */,
+				580924CC2BDFD77E0013E6ED /* BrushPressingDelegate.swift in Sources */,
 				A8CEF81A2BDF34B200E96B74 /* AppDelegate.swift in Sources */,
 				A8CEF82B2BDF35F200E96B74 /* DrawingService.swift in Sources */,
 				A8CEF82E2BDF388B00E96B74 /* Constants.swift in Sources */,

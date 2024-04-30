@@ -7,10 +7,16 @@
 
 import SwiftUI
 
+//protocol BrushPressingDelegate: AnyObject {
+//    func setIsBrushPressing(_ isPressing: Bool)
+//}
+
 struct ContentView: View {
+    @State private var isBrushPressing = false
+    
     var body: some View {
         ZStack(content: {
-            ARViewContainer()
+            ARViewContainer(isBrushPressing: $isBrushPressing)
                 .edgesIgnoringSafeArea(.all)
                 // Add button here
             
@@ -36,6 +42,14 @@ struct ContentView: View {
                     IconButton(imageName: "brush", iconSize: 35, buttonFill: true, label: "brush") {
                         print("Brush tapped") // Handle button tap action
                     }
+                    .onLongPressGesture(minimumDuration: 0.1,
+                                        maximumDistance: .infinity,
+                                        pressing: { isPressing in
+                        self.isBrushPressing = isPressing
+                        print(isPressing)
+                        print(self.isBrushPressing)
+                                }, perform: {})
+                                .padding()
                     
 //                  Camera Icon
                     IconButton(imageName: "camera", iconSize: 35, buttonFill: false, label: "camera") {
