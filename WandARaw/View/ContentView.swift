@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     let viewController = ARManager.shared
+    let drawingService = DrawingService()
     @State private var isPhotoTapped = false
     
     var body: some View {
@@ -27,6 +28,7 @@ struct ContentView: View {
 //                  Trash Icon
                     IconButton(imageName: "trash", iconSize: 25, buttonFill: false, label: "trash") {
                         print("Trash tapped") // Handle button tap action
+                        drawingService.deleteAllNode()
                     }
                     Spacer()
 //                  Info Icon
