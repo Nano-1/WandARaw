@@ -21,21 +21,19 @@ struct AnimateBrushColor: View {
         self.colorOptions = colorOptions
         self.viewController = viewController
     }
-    
     var body: some View {
-        VStack {
-            BrushColor(colorSet: selectedColor)
-               .onTapGesture {
-                    withAnimation {
-                        isColorListVisible.toggle()
-                    }
-                }
-               .padding()
-            
+        VStack{
             if isColorListVisible {
                 colorListView
-                   .transition(.move(edge:.bottom))
             }
+            BrushColor(colorSet: selectedColor)
+                .onTapGesture {
+                    withAnimation(.easeInOut) {
+                        isColorListVisible.toggle()
+                        
+                    }
+                }
+                .padding()
         }
     }
     
@@ -55,14 +53,12 @@ struct AnimateBrushColor: View {
                        .fill(color)
                        .frame(width: 30, height: 30)
                 }
-               .buttonStyle(PlainButtonStyle()) // Ensure consistent button style
+                .buttonStyle(.borderless) // Ensure consistent button style
             }
         }
-       .padding()
-       .background(Color.white)
        .cornerRadius(10)
        .shadow(radius: 5)
-       .padding(.horizontal)
+       .offset(x:100)
     }
     
 //    let colorOptions: [Color] = [.blue,.green,.yellow,.red,.white,.black]
