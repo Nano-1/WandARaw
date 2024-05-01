@@ -21,7 +21,7 @@ struct ContentView: View {
             ARViewContainer(isBrushPressing: $isBrushPressing, viewController: arViewController)
                 .edgesIgnoringSafeArea(.all)
             // Add button here
-            Rectangle().fill()
+//            Rectangle().fill()
             
              // Crosshair
             Text("+")
