@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		580924CA2BDFC92A0013E6ED /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580924C92BDFC92A0013E6ED /* IconButton.swift */; };
+		634AA2BC2BE0D2DF00FF432D /* PathShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634AA2BB2BE0D2DF00FF432D /* PathShape.swift */; };
 		A8CEF81A2BDF34B200E96B74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF8192BDF34B200E96B74 /* AppDelegate.swift */; };
 		A8CEF81C2BDF34B200E96B74 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = A8CEF81B2BDF34B200E96B74 /* art.scnassets */; };
 		A8CEF81E2BDF34B200E96B74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF81D2BDF34B200E96B74 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		580924C92BDFC92A0013E6ED /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
+		634AA2BB2BE0D2DF00FF432D /* PathShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathShape.swift; sourceTree = "<group>"; };
 		A8CEF8162BDF34B200E96B74 /* WandARaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WandARaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8CEF8192BDF34B200E96B74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8CEF81B2BDF34B200E96B74 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				A8CEF81B2BDF34B200E96B74 /* art.scnassets */,
 				A8CEF81F2BDF34B200E96B74 /* Main.storyboard */,
 				A8CEF8222BDF34B300E96B74 /* Assets.xcassets */,
+				634AA2BB2BE0D2DF00FF432D /* PathShape.swift */,
 			);
 			path = WandARaw;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				B5634E1D2BE0A1A300720181 /* BrushColor.swift in Sources */,
 				A8CEF8482BDFA4AA00E96B74 /* ARManager.swift in Sources */,
 				B5634E1B2BE0A18F00720181 /* AnimateBrushColor.swift in Sources */,
+				634AA2BC2BE0D2DF00FF432D /* PathShape.swift in Sources */,
 				A8CEF83B2BDF8A0D00E96B74 /* ContentView.swift in Sources */,
 				A8CEF81A2BDF34B200E96B74 /* AppDelegate.swift in Sources */,
 				A8CEF82B2BDF35F200E96B74 /* DrawingService.swift in Sources */,
@@ -358,7 +362,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VNG2A57GP5;
+				DEVELOPMENT_TEAM = 4V452CD2YS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -389,7 +393,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VNG2A57GP5;
+				DEVELOPMENT_TEAM = 4V452CD2YS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

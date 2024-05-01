@@ -21,6 +21,7 @@ struct ContentView: View {
             ARViewContainer(isBrushPressing: $isBrushPressing, viewController: arViewController)
                 .edgesIgnoringSafeArea(.all)
             // Add button here
+            Rectangle().fill()
             
              // Crosshair
             Text("+")
@@ -35,10 +36,9 @@ struct ContentView: View {
                         drawingService.deleteAllNode()
                     }
                     Spacer()
-//                  Camera Icon
-                    IconButton(imageName: "camera2", iconSize: 27, buttonFill: false, label: "camera") {
-                        print("Camera tapped") // Handle button tap action
-                        takePhoto()
+//                  Undo Icon
+                    IconButton(imageName: "arrow.uturn.backward", iconSize: 25, buttonFill: false, label: "color") {
+                        print("Color tapped") // Handle button tap action
                     }
                 }
                 Spacer()
@@ -60,11 +60,10 @@ struct ContentView: View {
                         print(self.isBrushPressing)
                                 }, perform: {})
                                 .padding()
-                    
-//                  Brush Size Icon
-                    IconButton(imageName: "pencil.tip", iconSize: 35, buttonFill: false, label: "brush size") {
-                        print("Brush size tapped") // Handle button tap action
-                        
+//                  Camera Icon
+                    IconButton(imageName: "camera2", iconSize: 35, buttonFill: false, label: "camera") {
+                        print("Camera tapped") // Handle button tap action
+                        takePhoto()
                     }
                 }
                 .padding(16)
