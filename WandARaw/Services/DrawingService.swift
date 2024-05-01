@@ -10,6 +10,13 @@ import ARKit
 
 class DrawingService: NSObject{
     let sceneView = ARManager.shared.sceneView
+    var groupNodes: [SCNNode] = []
+    
+    func makeNewParentNode() {
+        let node = SCNNode()
+        sceneView.scene.rootNode.addChildNode(node)
+    }
+    
     func addChildNode(node: SCNNode){
         guard let currentFrame = sceneView.session.currentFrame else {return}
         let camera = currentFrame.camera
@@ -22,13 +29,27 @@ class DrawingService: NSObject{
         
         let modifiedMatrix = simd_mul(transform, translationMatrix)
         node.simdTransform = modifiedMatrix
-        sceneView.scene.rootNode.addChildNode(node)
+        sceneView.scene.rootNode.childNodes.last?.addChildNode(node)
+    }
+    
+    func lastAddedNode() -> SCNNode? {
+        guard let lastNode = sceneView.scene.rootNode.childNodes.last else {
+            return nil
+        }
+        
+        return lastNode
+    }
+    
+    func undoLastNode(){
+        lastAddedNode()?.removeFromParentNode()
     }
     
     func deleteAllNode(){
         sceneView.scene.rootNode.enumerateChildNodes { (node, _) in
             node.removeFromParentNode()
         }
+        groupNodes.removeAll()
     }
+
 }
 

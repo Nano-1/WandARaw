@@ -20,7 +20,6 @@ struct ContentView: View {
             ARViewContainer(isBrushPressing: $isBrushPressing)
                 .edgesIgnoringSafeArea(.all)
             // Add button here
-            Rectangle().fill()
             
              // Crosshair
             Text("+")
@@ -37,14 +36,15 @@ struct ContentView: View {
                     Spacer()
 //                  Undo Icon
                     IconButton(imageName: "arrow.uturn.backward", iconSize: 25, buttonFill: false, label: "color") {
-                        print("Color tapped") // Handle button tap action
+                        print("Undo tapped") // Handle button tap action
+                        drawingService.undoLastNode()
                     }
                 }
                 Spacer()
                 HStack(alignment: .center, spacing: 40) {
 //                  Tools Icon
-                    IconButton(imageName: "paintpalette", iconSize: 35, buttonFill: false, label: "brush") {
-                        print("Brush tapped") // Handle button tap action
+                    IconButton(imageName: "paintpalette", iconSize: 35, buttonFill: false, label: "tools") {
+                        print("Tools tapped") // Handle button tap action
                     }
 //                  Draw Icon
                     IconButton(imageName: "brush", iconSize: 35, buttonFill: true, label: "brush") {

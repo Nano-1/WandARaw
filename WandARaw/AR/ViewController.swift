@@ -12,14 +12,20 @@ import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
 
+    @IBOutlet var sceneView: ARSCNView!
+    let drawingService = DrawingService()
+    var flag: Bool = false
+    
     var isBrushPressing: Bool = false {
         didSet {
             // Use isBrushPressing in your AR scene
             print("isBrushPressing: \(isBrushPressing)")
+            
+            if isBrushPressing {
+                drawingService.makeNewParentNode()
+            }
         }
     }
-    @IBOutlet var sceneView: ARSCNView!
-    let drawingService = DrawingService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
