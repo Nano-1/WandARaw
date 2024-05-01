@@ -76,7 +76,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
     }
     
-    func renderer(_ renderer: any SCNSceneRenderer, willRenderScene scene: SCNScene, atTime time: TimeInterval) {
+    func renderer(_ renderer: any SCNSceneRen derer, willRenderScene scene: SCNScene, atTime time: TimeInterval) {
         
         let constants = Constants()
         

@@ -7,10 +7,6 @@
 
 import SwiftUI
 
-//protocol BrushPressingDelegate: AnyObject {
-//    func setIsBrushPressing(_ isPressing: Bool)
-//}
-
 struct ContentView: View {
     @State private var isShowingSplash = true
     @State private var isBrushPressing = false
@@ -47,8 +43,6 @@ struct ContentView: View {
                                         maximumDistance: .infinity,
                                         pressing: { isPressing in
                         self.isBrushPressing = isPressing
-                        print(isPressing)
-                        print(self.isBrushPressing)
                                 }, perform: {})
                                 .padding()
                     
@@ -63,7 +57,7 @@ struct ContentView: View {
             if isShowingSplash {
                 SplashScreenView()
                     .onAppear {
-                        // Simulate a delay to show the splash screen for a few seconds
+                        // Simulate a deslay to show the splash screen for a few seconds
                         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                             withAnimation {
                                 isShowingSplash = false
