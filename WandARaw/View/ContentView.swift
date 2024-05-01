@@ -13,7 +13,9 @@ struct ContentView: View {
     let drawingService = DrawingService()
     let arViewController = ViewController()
     @State private var isPhotoTapped = false
+    @State private var isPalleteVisible = false
     @State var selectedColor = Color.blue
+    @State var selectedSize = 0.0025
     @State private var isBrushPressing = false
     
     var body: some View {
@@ -43,13 +45,21 @@ struct ContentView: View {
                     }
                 }
                 Spacer()
+                if isPalleteVisible {
+                    paletteView
+                }
                 HStack(alignment: .center, spacing: 40) {
-//                  Tools Icon
-                    AnimateBrushColor(selectedColor: $selectedColor, contentViewInstance: self, viewController: arViewController)
-//                    {
-//                        print("Tools tapped") // Handle button tap action
-//                    }
-//                  Brush Icon
+                    
+//------------------Color Icon
+                        Pallete()
+                        .onTapGesture {
+                            withAnimation(.easeInOut){
+                                isPalleteVisible.toggle()
+                            }
+                        }
+                        .padding()
+                    
+//------------------Brush Icon
                     IconButton(imageName: "brush", iconSize: 35, buttonFill: true, label: "brush") {
                         print("Brush tapped") // Handle button tap action
                     }
@@ -60,14 +70,14 @@ struct ContentView: View {
                         print(isPressing)
                         print(self.isBrushPressing)
                                 }, perform: {})
-                                .padding()
+//                                .padding()
 //                  Camera Icon
                     IconButton(imageName: "camera", iconSize: 35, buttonFill: false, label: "camera") {
                         print("Camera tapped") // Handle button tap action
                         takePhoto()
                     }
                 }
-                .padding(16)
+//                .padding(16)
             }
             // Photo Taken Indicator
                 Rectangle()
@@ -76,8 +86,19 @@ struct ContentView: View {
                     .opacity(isPhotoTapped ? 1.0 : 0.0)
                     .animation(.easeInOut(duration: 0.3), value: isPhotoTapped)
         })
+    
     }
-
+    @ViewBuilder
+    var paletteView: some View {
+        HStack {
+            AnimateBrushSize(brushSize: $selectedSize, viewController: arViewController, contentView: self)
+                .buttonStyle(.plain)
+                .padding(16)
+            AnimateBrushColor(selectedColor: $selectedColor, contentViewInstance: self, viewController: arViewController)
+                .buttonStyle(.plain)
+                .padding(16)
+        }
+    }
     func takePhoto() {
         isPhotoTapped = true
         UIImageWriteToSavedPhotosAlbum(viewController.sceneView.snapshot(), viewController, nil, nil)
