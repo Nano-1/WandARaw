@@ -92,7 +92,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let sphere = SCNNode()
         sphere.name = constants.sphereName
         sphere.geometry = SCNSphere(radius:selectedSize)
-        print("selected color is \(selectedColor)")
+//        print("selected color is \(selectedColor)")
         sphere.geometry?.firstMaterial?.diffuse.contents = UIColor(selectedColor)
         
         if isBrushPressing {

@@ -12,11 +12,16 @@ struct ContentView: View {
     let viewController = ARManager.shared
     let drawingService = DrawingService()
     let arViewController = ViewController()
+    let secretCode: [Color] = [.red, .yellow, .black, .blue]
+    
+    @State var isOpen: Bool = false
     @State private var isPhotoTapped = false
     @State private var isPalleteVisible = false
     @State var selectedColor = Color.blue
+    @State var colorFormationArr: [Color] = []
     @State var selectedSize = 0.0025
     @State private var isBrushPressing = false
+    @State var count = 0
     
     var body: some View {
         ZStack(content: {
@@ -94,7 +99,7 @@ struct ContentView: View {
             AnimateBrushSize(brushSize: $selectedSize, viewController: arViewController, contentView: self)
                 .buttonStyle(.plain)
                 .padding(16)
-            AnimateBrushColor(selectedColor: $selectedColor, contentViewInstance: self, viewController: arViewController)
+            AnimateBrushColor(selectedColor: $selectedColor, contentViewInstance: self, viewController: arViewController, colorFormationArr: $colorFormationArr, count: $count)
                 .buttonStyle(.plain)
                 .padding(16)
         }
@@ -108,6 +113,7 @@ struct ContentView: View {
             isPhotoTapped = false
         }
     }
+    
     
 }
 

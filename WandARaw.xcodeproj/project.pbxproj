@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		580924CA2BDFC92A0013E6ED /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580924C92BDFC92A0013E6ED /* IconButton.swift */; };
-		634AA2BC2BE0D2DF00FF432D /* PathShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634AA2BB2BE0D2DF00FF432D /* PathShape.swift */; };
 		A8CEF81A2BDF34B200E96B74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF8192BDF34B200E96B74 /* AppDelegate.swift */; };
 		A8CEF81C2BDF34B200E96B74 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = A8CEF81B2BDF34B200E96B74 /* art.scnassets */; };
 		A8CEF81E2BDF34B200E96B74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF81D2BDF34B200E96B74 /* ViewController.swift */; };
@@ -24,11 +23,11 @@
 		B5979AE72BE21D7C00A23509 /* AnimateBrushSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5979AE62BE21D7C00A23509 /* AnimateBrushSize.swift */; };
 		B5979AE92BE21D8A00A23509 /* BrushSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5979AE82BE21D8A00A23509 /* BrushSize.swift */; };
 		B5979AED2BE2319F00A23509 /* Pallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5979AEC2BE2319E00A23509 /* Pallete.swift */; };
+		B5DC17572BE2BD280086BF10 /* Checker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DC17562BE2BD280086BF10 /* Checker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		580924C92BDFC92A0013E6ED /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
-		634AA2BB2BE0D2DF00FF432D /* PathShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathShape.swift; sourceTree = "<group>"; };
 		A8CEF8162BDF34B200E96B74 /* WandARaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WandARaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8CEF8192BDF34B200E96B74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8CEF81B2BDF34B200E96B74 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -45,6 +44,7 @@
 		B5979AE62BE21D7C00A23509 /* AnimateBrushSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateBrushSize.swift; sourceTree = "<group>"; };
 		B5979AE82BE21D8A00A23509 /* BrushSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushSize.swift; sourceTree = "<group>"; };
 		B5979AEC2BE2319E00A23509 /* Pallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pallete.swift; sourceTree = "<group>"; };
+		B5DC17562BE2BD280086BF10 /* Checker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,6 @@
 				A8CEF81B2BDF34B200E96B74 /* art.scnassets */,
 				A8CEF81F2BDF34B200E96B74 /* Main.storyboard */,
 				A8CEF8222BDF34B300E96B74 /* Assets.xcassets */,
-				634AA2BB2BE0D2DF00FF432D /* PathShape.swift */,
 			);
 			path = WandARaw;
 			sourceTree = "<group>";
@@ -138,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				B5634E1A2BE0A18F00720181 /* AnimateBrushColor.swift */,
+				B5DC17562BE2BD280086BF10 /* Checker.swift */,
 				B5634E1C2BE0A1A300720181 /* BrushColor.swift */,
 				B5979AE62BE21D7C00A23509 /* AnimateBrushSize.swift */,
 				B5979AE82BE21D8A00A23509 /* BrushSize.swift */,
@@ -222,8 +222,8 @@
 				B5979AE92BE21D8A00A23509 /* BrushSize.swift in Sources */,
 				B5634E1D2BE0A1A300720181 /* BrushColor.swift in Sources */,
 				A8CEF8482BDFA4AA00E96B74 /* ARManager.swift in Sources */,
+				B5DC17572BE2BD280086BF10 /* Checker.swift in Sources */,
 				B5634E1B2BE0A18F00720181 /* AnimateBrushColor.swift in Sources */,
-				634AA2BC2BE0D2DF00FF432D /* PathShape.swift in Sources */,
 				A8CEF83B2BDF8A0D00E96B74 /* ContentView.swift in Sources */,
 				A8CEF81A2BDF34B200E96B74 /* AppDelegate.swift in Sources */,
 				A8CEF82B2BDF35F200E96B74 /* DrawingService.swift in Sources */,
