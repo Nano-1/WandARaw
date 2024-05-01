@@ -1,6 +1,9 @@
 {
   "images" : [
     {
+      "idiom" : "universal"
+    },
+    {
       "filename" : "paintpalette.png",
       "idiom" : "universal",
       "scale" : "1x"

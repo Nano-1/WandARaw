@@ -21,7 +21,7 @@ struct ContentView: View {
             ARViewContainer(isBrushPressing: $isBrushPressing, viewController: arViewController)
                 .edgesIgnoringSafeArea(.all)
             // Add button here
-//            Rectangle().fill()
+//            Rectangle().fill(.blue)
             
              // Crosshair
             Text("+")
@@ -37,7 +37,7 @@ struct ContentView: View {
                     }
                     Spacer()
 //                  Undo Icon
-                    IconButton(imageName: "arrow.uturn.backward", iconSize: 25, buttonFill: false, label: "color") {
+                    IconButton(imageName: "arrow-uturn-left", iconSize: 25, buttonFill: false, label: "color") {
                         print("Undo tapped") // Handle button tap action
                         drawingService.undoLastNode()
                     }
@@ -62,7 +62,7 @@ struct ContentView: View {
                                 }, perform: {})
                                 .padding()
 //                  Camera Icon
-                    IconButton(imageName: "camera2", iconSize: 35, buttonFill: false, label: "camera") {
+                    IconButton(imageName: "camera", iconSize: 35, buttonFill: false, label: "camera") {
                         print("Camera tapped") // Handle button tap action
                         takePhoto()
                     }
