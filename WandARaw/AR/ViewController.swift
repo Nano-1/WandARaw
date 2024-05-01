@@ -23,6 +23,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             
             if isBrushPressing {
                 drawingService.makeNewParentNode()
+            } else {
+                drawingService.applyPhysicsToNode()
             }
         }
     }
@@ -39,7 +41,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Set the view's delegate
         sceneView.delegate = self
         
+        sceneView.autoenablesDefaultLighting = true
+        
+        let mainScene = SCNScene()
+//        let cubeNode = createCube()
+        mainScene.rootNode.addChildNode(drawingService.cubeNode)
+        sceneView.scene = mainScene
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
