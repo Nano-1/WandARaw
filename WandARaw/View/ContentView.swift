@@ -38,15 +38,16 @@ struct ContentView: View {
                     Spacer()
 //                  Undo Icon
                     IconButton(imageName: "arrow.uturn.backward", iconSize: 25, buttonFill: false, label: "color") {
-                        print("Color tapped") // Handle button tap action
+                        print("Undo tapped") // Handle button tap action
+                        drawingService.undoLastNode()
                     }
                 }
                 Spacer()
                 HStack(alignment: .center, spacing: 40) {
-//                  Color Icon
+//                  Tools Icon
                     AnimateBrushColor(selectedColor: $selectedColor, contentViewInstance: self, viewController: arViewController)
 //                    {
-//                        print("Color tapped") // Handle button tap action
+//                        print("Tools tapped") // Handle button tap action
 //                    }
 //                  Brush Icon
                     IconButton(imageName: "brush", iconSize: 35, buttonFill: true, label: "brush") {
