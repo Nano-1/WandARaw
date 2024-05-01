@@ -38,6 +38,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Set the view's delegate
         sceneView.delegate = self
+        sceneView.autoenablesDefaultLighting = true
         
     }
     
