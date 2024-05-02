@@ -55,13 +55,17 @@ struct ContentView: View {
                 HStack(alignment: .center, spacing: 40) {
                     
 //------------------Color Icon
-                        Pallete()
+                    Image(systemName: "paintpalette.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 35)
                         .onTapGesture {
                             withAnimation(.easeInOut){
                                 isPalleteVisible.toggle()
                             }
                         }
                         .padding()
+                        .foregroundStyle(Color(selectedColor))
                     
 //------------------Brush Icon
                     IconButton(imageName: "brush", iconSize: 35, buttonFill: true, label: "brush") {
@@ -106,13 +110,38 @@ struct ContentView: View {
     }
     @ViewBuilder
     var paletteView: some View {
-        HStack {
-            AnimateBrushSize(brushSize: $selectedSize, viewController: arViewController, contentView: self)
-                .buttonStyle(.plain)
+        ZStack {
+            HStack {
+                AnimateBrushColor(selectedColor: $selectedColor, contentViewInstance: self, viewController: arViewController, colorFormationArr: $colorFormationArr, count: $count)
+                    .buttonStyle(.plain)
                 .padding(16)
-            AnimateBrushColor(selectedColor: $selectedColor, contentViewInstance: self, viewController: arViewController, colorFormationArr: $colorFormationArr, count: $count)
-                .buttonStyle(.plain)
-                .padding(16)
+                .offset(x: 20)
+                Spacer()
+            }
+            HStack {
+                Spacer()
+                Slider(
+                    value: $selectedSize,
+                    in: 0.0005...0.01,
+                    step: 0.000025
+                )
+                {
+                    Text("Size")
+                } minimumValueLabel:{
+                    Text("0")
+                        .bold()
+                } maximumValueLabel: {
+                    Text("100")
+                        .bold()
+                }
+                .onChange(of: selectedSize){
+                    arViewController.selectedSize = selectedSize
+                }
+                .frame(width: 250, height: 20)
+                .bold()
+                .rotationEffect(Angle(degrees: -90))
+                .offset(x: 80)
+            }
         }
     }
     func takePhoto() {
