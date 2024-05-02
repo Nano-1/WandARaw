@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		580924CA2BDFC92A0013E6ED /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580924C92BDFC92A0013E6ED /* IconButton.swift */; };
 		634AA2BC2BE0D2DF00FF432D /* PathShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634AA2BB2BE0D2DF00FF432D /* PathShape.swift */; };
+		A817165E2BE315A100BC3BB5 /* Rainforest_after_the_rain_storm.usdz in Resources */ = {isa = PBXBuildFile; fileRef = A817165D2BE315A100BC3BB5 /* Rainforest_after_the_rain_storm.usdz */; };
+		A81716602BE3167700BC3BB5 /* Stylized_Sword.scn in Resources */ = {isa = PBXBuildFile; fileRef = A817165F2BE3167700BC3BB5 /* Stylized_Sword.scn */; };
+		A81716622BE3167B00BC3BB5 /* Viking_book.scn in Resources */ = {isa = PBXBuildFile; fileRef = A81716612BE3167B00BC3BB5 /* Viking_book.scn */; };
 		A8CEF81A2BDF34B200E96B74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF8192BDF34B200E96B74 /* AppDelegate.swift */; };
 		A8CEF81C2BDF34B200E96B74 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = A8CEF81B2BDF34B200E96B74 /* art.scnassets */; };
 		A8CEF81E2BDF34B200E96B74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF81D2BDF34B200E96B74 /* ViewController.swift */; };
@@ -19,11 +22,18 @@
 		A8CEF83B2BDF8A0D00E96B74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF83A2BDF8A0D00E96B74 /* ContentView.swift */; };
 		A8CEF83D2BDF927200E96B74 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF83C2BDF927200E96B74 /* ARViewContainer.swift */; };
 		A8CEF8482BDFA4AA00E96B74 /* ARManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF8472BDFA4AA00E96B74 /* ARManager.swift */; };
+		A8FEF4372BE0F3350076414B /* PortalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FEF4362BE0F3350076414B /* PortalService.swift */; };
+		A8FEF4392BE0F6330076414B /* PortalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FEF4382BE0F6330076414B /* PortalController.swift */; };
+		A8FEF43B2BE0F66A0076414B /* ARPortalContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FEF43A2BE0F66A0076414B /* ARPortalContainer.swift */; };
+		A8FEF43D2BE0FDBB0076414B /* PortalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FEF43C2BE0FDBB0076414B /* PortalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		580924C92BDFC92A0013E6ED /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
 		634AA2BB2BE0D2DF00FF432D /* PathShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathShape.swift; sourceTree = "<group>"; };
+		A817165D2BE315A100BC3BB5 /* Rainforest_after_the_rain_storm.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = Rainforest_after_the_rain_storm.usdz; path = ../../../../../../Downloads/Rainforest_after_the_rain_storm.usdz; sourceTree = "<group>"; };
+		A817165F2BE3167700BC3BB5 /* Stylized_Sword.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = Stylized_Sword.scn; path = ../../../../../../Downloads/Stylized_Sword.scn; sourceTree = "<group>"; };
+		A81716612BE3167B00BC3BB5 /* Viking_book.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = Viking_book.scn; path = ../../../../../../Downloads/Viking_book.scn; sourceTree = "<group>"; };
 		A8CEF8162BDF34B200E96B74 /* WandARaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WandARaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8CEF8192BDF34B200E96B74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8CEF81B2BDF34B200E96B74 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -35,6 +45,10 @@
 		A8CEF83A2BDF8A0D00E96B74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A8CEF83C2BDF927200E96B74 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
 		A8CEF8472BDFA4AA00E96B74 /* ARManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARManager.swift; sourceTree = "<group>"; };
+		A8FEF4362BE0F3350076414B /* PortalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalService.swift; sourceTree = "<group>"; };
+		A8FEF4382BE0F6330076414B /* PortalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalController.swift; sourceTree = "<group>"; };
+		A8FEF43A2BE0F66A0076414B /* ARPortalContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPortalContainer.swift; sourceTree = "<group>"; };
+		A8FEF43C2BE0FDBB0076414B /* PortalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +91,9 @@
 				A8CEF81F2BDF34B200E96B74 /* Main.storyboard */,
 				A8CEF8222BDF34B300E96B74 /* Assets.xcassets */,
 				634AA2BB2BE0D2DF00FF432D /* PathShape.swift */,
+				A817165D2BE315A100BC3BB5 /* Rainforest_after_the_rain_storm.usdz */,
+				A817165F2BE3167700BC3BB5 /* Stylized_Sword.scn */,
+				A81716612BE3167B00BC3BB5 /* Viking_book.scn */,
 			);
 			path = WandARaw;
 			sourceTree = "<group>";
@@ -85,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				A8CEF82A2BDF35F200E96B74 /* DrawingService.swift */,
+				A8FEF4362BE0F3350076414B /* PortalService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -102,6 +120,7 @@
 			children = (
 				A8CEF83A2BDF8A0D00E96B74 /* ContentView.swift */,
 				580924C92BDFC92A0013E6ED /* IconButton.swift */,
+				A8FEF43C2BE0FDBB0076414B /* PortalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -111,6 +130,8 @@
 			children = (
 				A8CEF83C2BDF927200E96B74 /* ARViewContainer.swift */,
 				A8CEF81D2BDF34B200E96B74 /* ViewController.swift */,
+				A8FEF4382BE0F6330076414B /* PortalController.swift */,
+				A8FEF43A2BE0F66A0076414B /* ARPortalContainer.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -184,6 +205,9 @@
 				A8CEF81C2BDF34B200E96B74 /* art.scnassets in Resources */,
 				A8CEF8232BDF34B300E96B74 /* Assets.xcassets in Resources */,
 				A8CEF8212BDF34B200E96B74 /* Base in Resources */,
+				A817165E2BE315A100BC3BB5 /* Rainforest_after_the_rain_storm.usdz in Resources */,
+				A81716602BE3167700BC3BB5 /* Stylized_Sword.scn in Resources */,
+				A81716622BE3167B00BC3BB5 /* Viking_book.scn in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,13 +220,17 @@
 			files = (
 				580924CA2BDFC92A0013E6ED /* IconButton.swift in Sources */,
 				A8CEF81E2BDF34B200E96B74 /* ViewController.swift in Sources */,
+				A8FEF43D2BE0FDBB0076414B /* PortalView.swift in Sources */,
 				A8CEF8482BDFA4AA00E96B74 /* ARManager.swift in Sources */,
+				A8FEF4372BE0F3350076414B /* PortalService.swift in Sources */,
 				634AA2BC2BE0D2DF00FF432D /* PathShape.swift in Sources */,
 				A8CEF83B2BDF8A0D00E96B74 /* ContentView.swift in Sources */,
+				A8FEF43B2BE0F66A0076414B /* ARPortalContainer.swift in Sources */,
 				A8CEF81A2BDF34B200E96B74 /* AppDelegate.swift in Sources */,
 				A8CEF82B2BDF35F200E96B74 /* DrawingService.swift in Sources */,
 				A8CEF82E2BDF388B00E96B74 /* Constants.swift in Sources */,
 				A8CEF83D2BDF927200E96B74 /* ARViewContainer.swift in Sources */,
+				A8FEF4392BE0F6330076414B /* PortalController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +374,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4V452CD2YS;
+				DEVELOPMENT_TEAM = G43U5DAGS3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

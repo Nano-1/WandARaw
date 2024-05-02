@@ -11,9 +11,11 @@ class ARManager {
     static let shared = ARManager()
     
     private init() {
-        sceneView = ARSCNView()
+        drawingSceneView = ARSCNView()
+        portalSceneView = ARSCNView()
     }
     
-    let sceneView: ARSCNView
+    let drawingSceneView: ARSCNView
+    let portalSceneView: ARSCNView
 }
 

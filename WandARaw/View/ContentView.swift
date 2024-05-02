@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let viewController = ARManager.shared
+    let arManager = ARManager.shared
     let drawingService = DrawingService()
     @State private var isPhotoTapped = false
     
@@ -20,7 +20,6 @@ struct ContentView: View {
             ARViewContainer(isBrushPressing: $isBrushPressing)
                 .edgesIgnoringSafeArea(.all)
             // Add button here
-            Rectangle().fill()
             
              // Crosshair
             Text("+")
@@ -77,7 +76,7 @@ struct ContentView: View {
 
     func takePhoto() {
         isPhotoTapped = true
-        UIImageWriteToSavedPhotosAlbum(viewController.sceneView.snapshot(), viewController, nil, nil)
+        UIImageWriteToSavedPhotosAlbum(arManager.drawingSceneView.snapshot(), arManager, nil, nil)
         print("\(isPhotoTapped)")
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {

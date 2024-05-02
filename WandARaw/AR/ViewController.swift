@@ -24,7 +24,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sceneView = ARManager.shared.sceneView
+        sceneView = ARManager.shared.drawingSceneView
         sceneView.frame = self.view.frame
         self.view.addSubview(sceneView)
         
