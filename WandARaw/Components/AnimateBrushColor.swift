@@ -17,7 +17,7 @@ struct AnimateBrushColor: View {
     var contentView: ContentView
     var delegate: AnimateBrushColorDelegate?
     let colorOptions: [Color]
-    let secretCode: [Color] = [.red, .yellow, .blue]
+    let secretCode: [Color] = [.red, .yellow, .blue, .red, .yellow, .blue, .red, .yellow, .blue]
     let haptics = UIImpactFeedbackGenerator(style: .heavy)
     
     
@@ -46,7 +46,7 @@ struct AnimateBrushColor: View {
                             viewController.selectedColor = self.selectedColor
                             contentView.selectedColor = self.selectedColor
                             self.colorFormationArr.append(color)
-                            if colorFormationArr.count == 4 && colorFormationArr.count>0{
+                            if colorFormationArr.count == 9 && colorFormationArr.count>0{
                                 checkColor()
                             }
                             
@@ -73,31 +73,34 @@ struct AnimateBrushColor: View {
         }
     }
     func checkColor(){
+//        print("masuk func")
         haptics.prepare()
         for (a, element) in colorFormationArr.enumerated() {
                 if element == secretCode[a] {
 //                    print("!", terminator: "")
                     count += 1
 //                    print("count sekarang \(count)")
-                    if count == 4 {
+                    if count == 9 {
                         isPortalVisible.toggle()
-                        withAnimation(.easeInOut){
-                            if isPortalVisible{
-                                
-                                print("KEBUKA CUY \(count)")
-                                colorFormationArr = []
-                                count = 0
-                                haptics.impactOccurred()
+                        colorFormationArr = []
+                        count = 0
+//                        print("masuk 9")
+                        haptics.impactOccurred()
+                        if isPortalVisible == true{
+//                            print("Portal kebuka")
+                            withAnimation(.easeInOut){
                                 //                        impactFeedbackGenerator.impactOccurred()
                                 // OPEN PORTAL HERE----------------------------------
                             }
+                        }else if isPortalVisible == false {
+//                            print("Porta ketutup")
+                        }
                     }
-                } else if element != secretCode[a] {
-//                    print("X", terminator: "")
-                    count = 0
-                    break
-                }
-        }
+                }else if element != secretCode[a] {
+                    //                    print("X", terminator: "")
+                                        count = 0
+                                        break
+            }
         }
     }
     
