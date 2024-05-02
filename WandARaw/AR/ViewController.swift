@@ -11,7 +11,7 @@ import ARKit
 import SwiftUI
 
 
-class ViewController: UIViewController, ARSCNViewDelegate {
+class ViewController: UIViewController, ARSCNViewDelegate, SCNPhysicsContactDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     let drawingService = DrawingService()
@@ -34,6 +34,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        if drawingService.motionManager.isAccelerometerAvailable {
+//            drawingService.motionManager.accelerometerUpdateInterval = 0.01
+//            drawingService.motionManager.startAccelerometerUpdates()
+//           } else {
+//               print("Accelerometer data is not available")
+//           }
+//        
         sceneView = ARManager.shared.sceneView
         sceneView.frame = self.view.frame
         self.view.addSubview(sceneView)
@@ -46,8 +53,25 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let mainScene = SCNScene()
 //        let cubeNode = createCube()
         mainScene.rootNode.addChildNode(drawingService.cubeNode)
+        mainScene.rootNode.addChildNode(drawingService.circleNode)
         sceneView.scene = mainScene
+        
+        sceneView.scene.physicsWorld.contactDelegate = self
     }
+    
+        func physicsWorld(_ world: SCNPhysicsWorld, didBegin contact: SCNPhysicsContact) {
+            // Check if the contact is between the cubeNode and another node
+            if contact.nodeA == drawingService.cubeNode || contact.nodeB == drawingService.cubeNode {
+                print("masuk")
+                // Update the position of cubeNode
+                let newPosition = SCNVector3(
+                    x: Float.random(in: -1...0),
+                    y: Float.random(in: -1...0),
+                    z: Float.random(in: -1...0)
+                )
+                drawingService.cubeNode.position = newPosition
+            }
+        }
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -99,7 +123,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         let sphere = SCNNode()
         sphere.name = constants.sphereName
-        sphere.geometry = SCNSphere(radius:0.0025)
+        sphere.geometry = SCNSphere(radius:0.01)
 //        print("selected color is \(selectedColor)")
         sphere.geometry?.firstMaterial?.diffuse.contents = UIColor(selectedColor)
         
