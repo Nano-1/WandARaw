@@ -20,11 +20,6 @@
 		A8CEF83D2BDF927200E96B74 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF83C2BDF927200E96B74 /* ARViewContainer.swift */; };
 		A8CEF8482BDFA4AA00E96B74 /* ARManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CEF8472BDFA4AA00E96B74 /* ARManager.swift */; };
 		B5634E1B2BE0A18F00720181 /* AnimateBrushColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5634E1A2BE0A18F00720181 /* AnimateBrushColor.swift */; };
-		B5634E1D2BE0A1A300720181 /* BrushColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5634E1C2BE0A1A300720181 /* BrushColor.swift */; };
-		B5979AE72BE21D7C00A23509 /* AnimateBrushSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5979AE62BE21D7C00A23509 /* AnimateBrushSize.swift */; };
-		B5979AE92BE21D8A00A23509 /* BrushSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5979AE82BE21D8A00A23509 /* BrushSize.swift */; };
-		B5979AED2BE2319F00A23509 /* Pallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5979AEC2BE2319E00A23509 /* Pallete.swift */; };
-		B5DC17572BE2BD280086BF10 /* Checker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DC17562BE2BD280086BF10 /* Checker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,11 +37,6 @@
 		A8CEF83C2BDF927200E96B74 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
 		A8CEF8472BDFA4AA00E96B74 /* ARManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARManager.swift; sourceTree = "<group>"; };
 		B5634E1A2BE0A18F00720181 /* AnimateBrushColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateBrushColor.swift; sourceTree = "<group>"; };
-		B5634E1C2BE0A1A300720181 /* BrushColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushColor.swift; sourceTree = "<group>"; };
-		B5979AE62BE21D7C00A23509 /* AnimateBrushSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateBrushSize.swift; sourceTree = "<group>"; };
-		B5979AE82BE21D8A00A23509 /* BrushSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushSize.swift; sourceTree = "<group>"; };
-		B5979AEC2BE2319E00A23509 /* Pallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pallete.swift; sourceTree = "<group>"; };
-		B5DC17562BE2BD280086BF10 /* Checker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,11 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				B5634E1A2BE0A18F00720181 /* AnimateBrushColor.swift */,
-				B5DC17562BE2BD280086BF10 /* Checker.swift */,
-				B5634E1C2BE0A1A300720181 /* BrushColor.swift */,
-				B5979AE62BE21D7C00A23509 /* AnimateBrushSize.swift */,
-				B5979AE82BE21D8A00A23509 /* BrushSize.swift */,
-				B5979AEC2BE2319E00A23509 /* Pallete.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -222,8 +207,6 @@
 			files = (
 				580924CA2BDFC92A0013E6ED /* IconButton.swift in Sources */,
 				A8CEF81E2BDF34B200E96B74 /* ViewController.swift in Sources */,
-				B5979AE92BE21D8A00A23509 /* BrushSize.swift in Sources */,
-				B5634E1D2BE0A1A300720181 /* BrushColor.swift in Sources */,
 				A8CEF8482BDFA4AA00E96B74 /* ARManager.swift in Sources */,
 				58B056062BE2C090006835F7 /* SplashScreenView.swift in Sources */,
 				B5634E1B2BE0A18F00720181 /* AnimateBrushColor.swift in Sources */,
@@ -232,8 +215,6 @@
 				A8CEF82B2BDF35F200E96B74 /* DrawingService.swift in Sources */,
 				A8CEF82E2BDF388B00E96B74 /* Constants.swift in Sources */,
 				A8CEF83D2BDF927200E96B74 /* ARViewContainer.swift in Sources */,
-				B5979AE72BE21D7C00A23509 /* AnimateBrushSize.swift in Sources */,
-				B5979AED2BE2319F00A23509 /* Pallete.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
