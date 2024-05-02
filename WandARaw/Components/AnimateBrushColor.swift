@@ -8,6 +8,7 @@ struct AnimateBrushColor: View {
     @Binding var selectedColor: Color
     
     @State private var isColorListVisible = false
+    @State private var isPortalVisible = false
     @Binding var colorFormationArr: [Color]
     @Binding var count: Int
 
@@ -16,7 +17,7 @@ struct AnimateBrushColor: View {
     var contentView: ContentView
     var delegate: AnimateBrushColorDelegate?
     let colorOptions: [Color]
-    let secretCode: [Color] = [.red, .yellow, .black, .blue]
+    let secretCode: [Color] = [.red, .yellow, .blue]
     let haptics = UIImpactFeedbackGenerator(style: .heavy)
     
     
@@ -79,18 +80,24 @@ struct AnimateBrushColor: View {
                     count += 1
 //                    print("count sekarang \(count)")
                     if count == 4 {
-                        print("KEBUKA CUY \(count)")
-                        colorFormationArr = []
-                        count = 0
-                        haptics.impactOccurred()
-//                        impactFeedbackGenerator.impactOccurred()
-                        // OPEN PORTAL HERE----------------------------------
+                        isPortalVisible.toggle()
+                        withAnimation(.easeInOut){
+                            if isPortalVisible{
+                                
+                                print("KEBUKA CUY \(count)")
+                                colorFormationArr = []
+                                count = 0
+                                haptics.impactOccurred()
+                                //                        impactFeedbackGenerator.impactOccurred()
+                                // OPEN PORTAL HERE----------------------------------
+                            }
                     }
                 } else if element != secretCode[a] {
 //                    print("X", terminator: "")
                     count = 0
                     break
                 }
+        }
         }
     }
     
