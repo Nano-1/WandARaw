@@ -32,30 +32,7 @@ struct AnimateBrushColor: View {
     }
     
     var body: some View {
-<<<<<<< Updated upstream
-        VStack{
-            if isColorListVisible {
-                VStack {
-                    ForEach(colorOptions, id: \.self) { color in
-                        Button(action: {
-                            self.selectedColor = color
-                            self.delegate?.didSelectColor(color)
-//                            print("selected color \(selectedColor)")
-                            viewController.selectedColor = self.selectedColor
-                            contentView.selectedColor = self.selectedColor
-                            self.colorFormationArr.append(color)
-                            if colorFormationArr.count == 9 && colorFormationArr.count>0{
-                                checkColor()
-                            }
-                            
-                    }) {
-                            Circle()
-                               .fill(color)
-                               .frame(width: 36, height: 36)
-                        }
-                        .buttonStyle(.borderless) // Ensure consistent button style
-=======
-        VStack(alignment: .trailing) {
+        VStack {
             ForEach(colorOptions, id: \.self) { color in
                 Button(action: {
                     self.selectedColor = color
@@ -64,9 +41,8 @@ struct AnimateBrushColor: View {
                     viewController.selectedColor = self.selectedColor
                     contentView.selectedColor = self.selectedColor
                     self.colorFormationArr.append(color)
-                    if colorFormationArr.count == 4 && colorFormationArr.count>0{
+                    if colorFormationArr.count == 9 && colorFormationArr.count>0{
                         checkColor()
->>>>>>> Stashed changes
                     }
                     
                 }) {
@@ -80,59 +56,35 @@ struct AnimateBrushColor: View {
         .cornerRadius(10)
         .shadow(radius: 5)
     }
+    
     func checkColor(){
-//        print("masuk func")
+        //        print("masuk func")
         haptics.prepare()
         for (a, element) in colorFormationArr.enumerated() {
-<<<<<<< Updated upstream
-                if element == secretCode[a] {
-//                    print("!", terminator: "")
-                    count += 1
-//                    print("count sekarang \(count)")
-                    if count == 9 {
-                        isPortalVisible.toggle()
-                        colorFormationArr = []
-                        count = 0
-//                        print("masuk 9")
-                        haptics.impactOccurred()
-                        if isPortalVisible == true{
-//                            print("Portal kebuka")
-                            withAnimation(.easeInOut){
-                                //                        impactFeedbackGenerator.impactOccurred()
-                                // OPEN PORTAL HERE----------------------------------
-                            }
-                        }else if isPortalVisible == false {
-//                            print("Porta ketutup")
-                        }
-                    }
-                }else if element != secretCode[a] {
-                    //                    print("X", terminator: "")
-                                        count = 0
-                                        break
-=======
             if element == secretCode[a] {
                 //                    print("!", terminator: "")
                 count += 1
                 //                    print("count sekarang \(count)")
-                if count == 4 {
+                if count == 9 {
                     isPortalVisible.toggle()
-                    withAnimation(.easeInOut){
-                        if isPortalVisible{
-                            
-                            print("KEBUKA CUY \(count)")
-                            colorFormationArr = []
-                            count = 0
-                            haptics.impactOccurred()
+                    colorFormationArr = []
+                    count = 0
+                    //                        print("masuk 9")
+                    haptics.impactOccurred()
+                    if isPortalVisible == true{
+                        //                            print("Portal kebuka")
+                        withAnimation(.easeInOut){
                             //                        impactFeedbackGenerator.impactOccurred()
                             // OPEN PORTAL HERE----------------------------------
                         }
+                    }else if isPortalVisible == false {
+                        //                            print("Porta ketutup")
                     }
-                } else if element != secretCode[a] {
-                    //                    print("X", terminator: "")
-                    count = 0
-                    break
                 }
->>>>>>> Stashed changes
+            }else if element != secretCode[a] {
+                //                    print("X", terminator: "")
+                count = 0
+                break
             }
         }
     }
@@ -141,5 +93,4 @@ struct AnimateBrushColor: View {
     //    var colorListView: some View {
     //
     //    }
-    
 }
