@@ -53,7 +53,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNPhysicsContactDele
         let mainScene = SCNScene()
 //        let cubeNode = createCube()
         mainScene.rootNode.addChildNode(drawingService.cubeNode)
-        mainScene.rootNode.addChildNode(drawingService.circleNode)
+//        mainScene.rootNode.addChildNode(drawingService.circleNode)
         sceneView.scene = mainScene
         
         sceneView.scene.physicsWorld.contactDelegate = self

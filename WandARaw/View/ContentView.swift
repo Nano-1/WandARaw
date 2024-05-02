@@ -30,17 +30,17 @@ struct ContentView: View {
 
             VStack {
                 HStack {
-//                  Trash Icon
-                    IconButton(imageName: "trash", iconSize: 25, buttonFill: false, label: "trash") {
-                        print("Trash tapped") // Handle button tap action
-                        drawingService.deleteAllNode()
-                    }
-                    Spacer()
-//                  Undo Icon
-                    IconButton(imageName: "arrow-uturn-left", iconSize: 25, buttonFill: false, label: "color") {
-                        print("Undo tapped") // Handle button tap action
-                        drawingService.undoLastNode()
-                    }
+////                  Trash Icon
+//                    IconButton(imageName: "trash", iconSize: 25, buttonFill: false, label: "trash") {
+//                        print("Trash tapped") // Handle button tap action
+//                        drawingService.deleteAllNode()
+//                    }
+//                    Spacer()
+////                  Undo Icon
+//                    IconButton(imageName: "arrow-uturn-left", iconSize: 25, buttonFill: false, label: "color") {
+//                        print("Undo tapped") // Handle button tap action
+//                        drawingService.undoLastNode()
+//                    }
                 }
                 Spacer()
                 HStack(alignment: .center, spacing: 40) {

@@ -12,7 +12,7 @@ import ARKit
 class DrawingService: NSObject, SCNPhysicsContactDelegate {
     let sceneView = ARManager.shared.sceneView
     var groupNodes: [SCNNode] = []
-    let cubeNode = SCNNode(geometry:SCNBox(width: 0.2, height: 0.2, length: 1, chamferRadius: 0.3))
+    let cubeNode = SCNNode(geometry:SCNBox(width: 0.2, height: 0.2, length: 1.5, chamferRadius: 0.3))
     let circleNode = SCNNode(geometry:SCNPlane(width: 0.6, height: 0.6))
 //    let motionManager = CMMotionManager()
 
@@ -83,7 +83,7 @@ class DrawingService: NSObject, SCNPhysicsContactDelegate {
         
         // Add a physics body to the cube node
         cubeNode.position = SCNVector3(0, 0, -1)
-        cubeNode.physicsBody = SCNPhysicsBody(type: .static, shape: SCNPhysicsShape(geometry: SCNBox(width: 0.2, height: 0.2, length: 1, chamferRadius: 0), options: nil))
+        cubeNode.physicsBody = SCNPhysicsBody(type: .static, shape: SCNPhysicsShape(geometry: SCNBox(width: 0.2, height: 0.2, length: 1.5, chamferRadius: 0), options: nil))
         cubeNode.physicsBody?.isAffectedByGravity = false
         
         circleNode.position = SCNVector3(0, 0, -1.1)
